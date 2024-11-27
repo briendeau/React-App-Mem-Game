@@ -2,19 +2,27 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .score-board {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  padding: 64px;
+  background-image: url("./assets/pokemon-minimalistic-bulbasaur-pikachu-squirtle-sepia-backgrounds-charmander-starter-1920x1080-wa-anime-pokemon-hd-art-wallpaper-preview.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
 }
 
 .card-grid {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0px;
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  gap: 16px; /* Spacing between cards */
+  padding: 16px; /* Padding around the grid */
+  justify-content: space-between; /* Distribute space between cards */
 }
 
 .card {
@@ -22,18 +30,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 200px;
   background-color: white;
-  height: 240px;
+  height: 260px;
   border: 1px solid black;
-  margin: 10px;
   padding: 20px;
   border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  flex: 1 1 calc(25% - 16px); /* 4 cards per row with 16px gap */
+  box-sizing: border-box; /* Ensures padding and border are included in width calculation */
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 #root {
   /* display: flex; */
-  background-color: rgb(250, 109, 38);
+  background-color: rgba(65, 105, 144, 0.79);
 }
 
 .title {

@@ -8,11 +8,13 @@ function App() {
 
   return (
     <>
-      <h1 className="title">Memory Card Game - React App by Brian Riendeau</h1>
-      <h2 className="title">
-        Game Rule: Try to choose a different card each time!
-      </h2>
       <ScoreBoard score={score} highScore={highScore} />
+      <div>
+        <h2 className="title">
+          Memory Card Game - React App by Brian Riendeau <br /> <br />
+          Game Rule: Try to choose a different card each time!
+        </h2>
+      </div>
       <CardGrid
         updateScore={setScore}
         updateHighScore={setHighScore}
